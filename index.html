@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" type="image/png">
+    <title>Product List with Cart</title>
+</head>
+<body>
+    <header>
+        <h1>Desserts</h1>
+    </header>
+    <main>
+        <div id="product-list" class="product-list">
+            <!-- Product Items -->
+            <div class="product-item">
+                <img src="./assets/images/image-waffle-desktop.jpg" alt="Waffle with Berries">
+                <h3>Waffle with Berries</h3>
+                <p>Waffle</p>
+                <p>$6.50</p>
+                <button class="but-items" data-product="Waffle with Berries" onmouseenter="updateButtonDisplay('Waffle with Berries', 6.50)">
+                    <span>Add to Cart</span>
+                </button>
+                
+            </div>
+            <div class="product-item">
+                <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="Vanilla Bean Crème Brûlée">
+                <h3>Vanilla Bean Crème Brûlée</h3>
+                <p>Crème Brûlée</p>
+                <p>$7.00</p>
+                <button class="but-items" data-product = "Vanilla Bean Crème Brûlée" onmouseenter="updateButtonDisplay('Vanilla Bean Crème Brûlée', 7.00)">
+                    <span>Add to Cart</span>
+                </button>
+            </div>
+
+            <div class="product-item">
+                <img src="./assets/images/image-baklava-desktop.jpg" alt="baklava Bean Crème Brûlée">
+                <h3>baklava Bean Crème Brûlée</h3>
+                <p>baklava Bean Crème Brûlée</p>
+                <p>$10.00</p>
+                <button class="but-items" data-product ="baklava Bean Crème Brûlée" onmouseenter="updateButtonDisplay('baklava Bean Crème Brûlée', 10.00)">
+                    <span>Add to Cart</span>
+                </button>
+            </div>
+
+            <div class="product-item">
+                <img src="./assets/images/image-brownie-desktop.jpg" alt="Vanilla Bean brownie">
+                <h3>Vanilla Bean Brownie</h3>
+                <p>Vanilla Bean Brownie</p>
+                <p>$8.00</p>
+                <button class="but-items" data-product="Vanilla Bean brownie" onmouseenter="updateButtonDisplay('Vanilla Bean brownie', 8.00)">
+                    <span>Add to Cart</span>
+                </button>
+            </div>
+
+            <div class="product-item">
+                <img src="./assets/images/image-cake-desktop.jpg" alt="Cake Crème Brûlée">
+                <h3>Cake Crème Brûlée</h3>
+                <p>Cake Crème Brûlée</p>
+                <p>$11.00</p>
+                <button class="but-items" data-product="Cake Crème Brûlée" onmouseenter="updateButtonDisplay('Cake Crème Brûlée', 11.00)">
+                    <span>Add to Cart</span>
+                </button>
+            </div>
+
+            <div class="product-item">
+                <img src="./assets/images/image-macaron-desktop.jpg" alt="Vanilla Macaron">
+                <h3>Vanilla Macaron Crème Brûlée</h3>
+                <p>Vanilla Macaron</p>
+                <p>$5.00</p>
+                <button class="but-items" data-product="Vanilla Macaron" onmouseenter="updateButtonDisplay('Vanilla Macaron', 5.00)">
+                    <span>Add to Cart</span>
+                </button>
+            </div>
+
+            <div class="product-item">
+                <img src="./assets/images/image-meringue-desktop.jpg" alt="Meringue Crème Brûlée">
+                <h3>Meringue Crème Brûlée</h3>
+                <p>Meringue Crème Brûlée</p>
+                <p>$4.00</p>
+                <button class="but-items" data-product="Meringue Crème Brûlée" onmouseenter="updateButtonDisplay('Meringue Crème Brûlée', 4.00)">
+                    <span>Add to Cart</span>
+                </button>
+            </div>
+
+            <div class="product-item">
+                <img src="./assets/images/image-panna-cotta-desktop.jpg" alt="Panna Cotta">
+                <h3>Panna Cotta Crème Brûlée</h3>
+                <p>Panna Cotta</p>
+                <p>$7.00</p>
+                <button class="but-items" data-product="Panna Cotta" onmouseenter="updateButtonDisplay('Panna Cotta', 7.00)">
+                    <span>Add to Cart</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Cart Section -->
+        <div class="cart">
+            <div class="cart-header">Your Cart (<span id="cart-count">0</span>)</div>
+            <div id="cart-items" class="cart-items">
+                <p>Your added items will appear here</p>
+            </div>
+            <div class="total-price">
+                <span>Order Total:</span>
+                <span id="total-price" class="price-amount">$0.00</span>
+            </div>
+            
+            <button id="confirm-order" class="confirm-order" onclick="confirmOrder()">Confirm Order</button>
+        </div>
+        
+        
+    </main>
+
+    <!-- Order Confirmation Modal -->
+    <div id="order-confirmation-modal" class="modal">
+        <div class="modal-content">
+            <h3>Order Confirmed!</h3>
+            <p>We hope you enjoy your food!</p>
+            <div id="order-summary">
+                <!-- Order summary will appear here -->
+            </div>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>    
+
+    <script src="script.js"></script>
+</body>
+</html>
